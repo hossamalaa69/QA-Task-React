@@ -6,39 +6,39 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the application, we retrieve the questions/answers locally and show a list of posts questions (Number of answers, Body, date of post) As shown below. 
 
-###Home Page
+### Home Page
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/1-Home.png?raw=true)
 
-###Pagination
+### Pagination
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/2-Pagination1.png?raw=true)
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/2-Pagination2.png?raw=true)
 
-###Add Question
+### Add Question
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/3-AddQuesion1.png?raw=true)
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/3-AddQuestion2.png?raw=true)
 
-###Delete Question
+### Delete Question
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/3-Questiondelete.png?raw=true)
 
-###Open Answers
+### Open Answers
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/4-Ans0.png?raw=true)
 
-###View Answers
+### View Answers
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/4-Ans1.png?raw=true)
 
-###Add Answer
+### Add Answer
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/4-Ans2.png?raw=true)
 
-###Prevent Answering after exceeding maximum allowed number (10 answers/question)
+### Prevent Answering after exceeding maximum allowed number (10 answers/question)
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/4-Ans3Spam.png?raw=true)
 
-###Empty Answers
+### Empty Answers
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/4-Ans4Empty.png?raw=true)
 
-###Delete Answers
+### Delete Answers
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/4-Ans5Delete.png?raw=true)
 
-###Span Unlock after deleting Answers
+### Span Unlock after deleting Answers
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/4-Ans6SpanUnlock.png?raw=true)
 
 
