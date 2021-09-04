@@ -61,8 +61,8 @@ In the application, we retrieve the questions/answers locally and show a list of
 
 
 ## App Pages
-### Questions.js: View questions list, input form, and pagination 
-### Answers.js: View answers list and input form
+### 1-Questions.js: View questions list, input form, and pagination 
+### 2-Answers.js: View answers list and input form
 
 
 ## Available Scripts
