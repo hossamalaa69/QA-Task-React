@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import Grid from '@material-ui/core/Grid';
 import AddAnswer from '../components/AddAnswer';
 import { editQuestion } from '../store/actions/qaActions';
+import Typography from '@material-ui/core/Typography'
 
 class Answers extends Component {
     
@@ -76,10 +77,21 @@ class Answers extends Component {
                 <br/>
                 <div style={{ marginRight: '10%', marginLeft: '5%', marginTop: '30px', flexGrow: '1' }}>
                     <Grid container spacing={3}>
-                        <Grid item xs={4}>
-                            <AddAnswer createAnswer={this.createAnswer}/>
+                        <Grid item xs={3}>
+                            {
+                                (answers.length < 10) ? 
+                                (<AddAnswer createAnswer={this.createAnswer}/>):
+                                (<Typography
+                                    variant="h5" 
+                                    color="textSecondary"
+                                    component="h2"
+                                    gutterBottom
+                                    >
+                                    Exceeded Maximum Number of Answers
+                                </Typography>)
+                            }
                         </Grid>                    
-                        <Grid item xs={8}>    
+                        <Grid item xs={9}>    
                             {answersList}
                         </Grid>
                     </Grid>  

@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import { loadQuesions, deleteQuestion, addQuestion } from '../store/actions/qaActions';
 import Question from '../components/Question';
-//import Pagination from '../Pagination';
+import Pagination from '@material-ui/lab/Pagination';
 import AddQuestion from '../components/AddQuestion';
 import Grid from '@material-ui/core/Grid';
 
 class Questions extends Component {
     
-    /*
     state = {
-        currentPage: 1,
+        page: 1,
         questionsPerPage: 4
-    }*/
-    
+    }
+
     formatAMPM = () => {
         var date = new Date();
         var dateYMD = date.getDate()+'/'+(date.getMonth()+1)+'/'+date.getFullYear();
@@ -55,23 +54,29 @@ class Questions extends Component {
         });
     }
 
+    handleChangePagination = (event, value) => {
+        this.setState({
+            page: value
+        });
+    };
+
     render() { 
 
         const questions = this.props.questions.reverse();
 
-        /*const indexOfLastQuestion = this.state.currentPage * this.state.questionsPerPage;
+        const indexOfLastQuestion = this.state.page * this.state.questionsPerPage;
         const indexOfFirstQuestion = indexOfLastQuestion - this.state.questionsPerPage;
         const currentQuestions = questions.slice(indexOfFirstQuestion, indexOfLastQuestion);
-        */
-        const questionsList = questions.length ? (
-            questions.map(question => {
+
+        const questionsList = currentQuestions.length ? (
+            currentQuestions.map(question => {
               return (  
                 <div className="center" key={question.id} style={{ margin: '20px' }}>
-                    <Question 
-                    question={question} 
-                    onItemDelete = {this.onItemDelete} 
-                    onAnswersClicked={this.onAnswersClicked}     
-                    />
+                        <Question 
+                        question={question} 
+                        onItemDelete = {this.onItemDelete} 
+                        onAnswersClicked={this.onAnswersClicked}     
+                        />
                 </div>
               )
             })
@@ -87,8 +92,15 @@ class Questions extends Component {
                     </Grid>                    
                     <Grid item xs={8}>    
                         {questionsList}
+                        <Pagination 
+                        count={Math.ceil((questions.length)/5)} 
+                        color="secondary" 
+                        style={{backgroundColor:'transparent', margin: '20px'}} 
+                        onChange={this.handleChangePagination}    
+                        />
                     </Grid>
                 </Grid>  
+
             </div>
         );
     }
