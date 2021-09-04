@@ -5,41 +5,46 @@ import CardContent from '@material-ui/core/CardContent'
 import IconButton from '@material-ui/core/IconButton'
 import Typography from '@material-ui/core/Typography'
 import DeleteOutlined from '@material-ui/icons/DeleteOutlined'
-import { CardActionArea, makeStyles } from '@material-ui/core'
+import {makeStyles}  from '@material-ui/core'
 import Avatar from '@material-ui/core/Avatar'
 
 const useStyles = makeStyles({
   avatar: {
-    backgroundColor: '#C62828'
+    backgroundColor: '#C62828',
+    cursor: 'pointer'
   }
 })
 
-export default function Question({question, onItemDelete}) {
+export default function Question({question, onItemDelete, onAnswersClicked}) {
   const classes = useStyles()
 
   return (
     <div>
       <Card elevation={3}>
-        <CardActionArea>
           <CardHeader
             avatar={
-              <Avatar className={classes.avatar}>
+              <Avatar 
+              className={classes.avatar}
+              onClick = {() => {onAnswersClicked(question.id)}}
+              >
                 {question.answers.length}
               </Avatar>
               }  
               action={
-              <IconButton >
-                <DeleteOutlined onClick={() => {onItemDelete(question.id)}} />
+              <IconButton onClick={() => {onItemDelete(question.id)}}>
+                <DeleteOutlined  />
               </IconButton>
               }
             title={question.content}
-          />
+            titleTypographyProps={{variant:'h6' }}
+          >
+            
+          </CardHeader>
           <CardContent>
             <Typography variant="caption" color="textSecondary">
               { question.date }
             </Typography>
           </CardContent>
-        </CardActionArea>
       </Card>
     </div>
   )

@@ -152,22 +152,22 @@ export const initState = {
            {
             id: '12',   
             date: "3/9/2021 2:08 PM",
-            content: "Who is the smartest man alive?",
+            content: "Who is the fastest man alive?",
             answers: [
                 {
                     id: '1',
                     date: "3/9/2021 2:08 PM",
-                    content: "Hossam Alaa"
+                    content: "Flash"
                 },
                 {
                     id: '2',
                     date: "3/9/2021 3:11 PM",
-                    content: "of course Hossam Alaa"
+                    content: "The Flash"
                 },
                 {
                     id: '3',
                     date: "3/9/2021 3:32 PM",
-                    content: "Hoso"
+                    content: "Me LoL"
                 }
             ]
            }                                                                      
