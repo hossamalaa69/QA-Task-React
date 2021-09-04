@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the application, we retrieve the questions/answers locally and show a list of posts questions (Number of answers, Body, date of post) As shown below. 
 
-![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/home.png?raw=true)
+![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/1-Home.png?raw=true)
 
 
 
