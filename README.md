@@ -15,6 +15,8 @@ In the application, we retrieve the questions/answers locally and show a list of
 
 ### Add Question
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/3-AddQuesion1.png?raw=true)
+
+### Added Question
 ![alt text](https://github.com/hossamalaa69/QA-Task-React/blob/master/snapshots/3-AddQuestion2.png?raw=true)
 
 ### Delete Question
